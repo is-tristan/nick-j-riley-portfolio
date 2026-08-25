@@ -1,0 +1,25 @@
+.footerSocialItems {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+
+    .footerSocialItem {
+        display: flex;
+        align-items: center;
+        width: 2rem;
+        height: 2rem;
+        color: rgba(var(--primaryAltRgb), 0.8);
+        transition: var(--ease);
+
+        svg {
+            fill: currentColor;
+        }
+
+        &:hover {
+            color: var(--primaryAlt);
+            scale: 1.025;
+        }
+    }
+}

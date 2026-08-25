@@ -1,0 +1,27 @@
+.eyebrow {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.66rem;
+    text-transform: uppercase;
+    font-weight: 500;
+
+    @media (width >=768px) {
+        gap: 0.875rem;
+        font-size: 0.875rem;
+    }
+
+    @media (width >=1024px) {
+        font-size: 1rem;
+    }
+
+    @media (width >=576px) and (width < 1024px) {
+        text-align: center;
+        justify-content: center;
+    }
+
+    &[data-type="large"] {
+        font-size: 1.25rem;
+    }
+}

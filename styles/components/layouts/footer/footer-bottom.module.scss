@@ -1,0 +1,19 @@
+.footerBottom {
+    width: 100%;
+    overflow: hidden;
+
+    .footerWords {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 1rem;
+    }
+
+    .footerWord {
+        display: flex;
+        width: 100%;
+
+        &.footerWordTwo {
+            justify-content: center;
+        }
+    }
+}

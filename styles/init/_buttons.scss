@@ -1,0 +1,125 @@
+@use "./mixins" as *;
+
+.btn {
+    @include btn();
+
+    &.primary {
+        background: var(--color--button--background);
+        color: var(--color-button-text);
+    }
+
+    &.transparent {
+        background: transparent;
+        color: rgba(var(--lightRgb), 0.875);
+        border-color: rgba(var(--lightRgb), 0.875);
+        box-shadow: none;
+
+        &:hover {
+            background: var(--color--light);
+            color: var(--color--dark);
+        }
+    }
+
+    &.transparentDark {
+        border-color: var(--dark);
+        color: var(--dark);
+        background: transparent;
+        box-shadow: none;
+
+        &:hover {
+            background: var(--dark);
+            color: var(--light);
+        }
+    }
+
+    &.light {
+        background: var(--color--background);
+        color: var(--primaryAlt);
+        border-color: var(--light);
+    }
+
+    &.fullWidth {
+        width: 100%;
+        min-width: 100%;
+        flex-basis: 100%;
+    }
+}
+
+.textLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.15rem;
+    width: max-content;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    overflow: visible;
+    position: relative;
+    color: var(--primary);
+    background: transparent;
+    font-weight: 400;
+    box-shadow: unset;
+    transition: var(--ease);
+
+    @media (width < 576px) {
+        font-size: 0.75rem;
+    }
+
+    @media (width >=576px) and (width < 1024px) {
+        text-align: center;
+        width: 100%;
+    }
+
+    &:hover {
+        color: rgba(var(--primaryRgb), 0.875);
+    }
+
+    &.colorPrimary {
+        color: var(--primary);
+
+        &:hover {
+            color: rgba(var(--primaryRgb), 0.875);
+        }
+    }
+
+    &.colorPrimaryAlt {
+        color: var(--primaryAlt);
+
+        &:hover {
+            color: rgba(var(--primaryAltRgb), 0.875);
+        }
+    }
+
+    &.colorSecondary {
+        color: var(--secondary);
+
+        &:hover {
+            color: rgba(var(--secondaryRgb), 0.875);
+        }
+    }
+
+    &.colorLight {
+        color: var(--light);
+
+        &:hover {
+            color: rgba(var(--lightRgb), 0.875);
+        }
+    }
+
+    &.colorLightAlt {
+        color: var(--lightAlt);
+
+        &:hover {
+            color: rgba(var(--lightAltRgb), 0.875);
+        }
+    }
+
+    &.colorDark {
+        color: var(--dark);
+
+        &:hover {
+            color: rgba(var(--darkRgb), 0.875);
+        }
+    }
+}

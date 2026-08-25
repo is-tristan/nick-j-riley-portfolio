@@ -1,0 +1,175 @@
+/*
+* =============================================
+* Headings
+* ============================================= 
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--heading);
+    font-weight: 700;
+    line-height: 100%;
+    margin: 0;
+    padding: 0;
+    text-wrap: balance;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: var(--color--title);
+
+    @media (width >=576px) and (width < 1024px) {
+        text-align: center;
+    }
+}
+
+
+h1 {
+    font-size: 1.75rem;
+
+    &.pageTitle {
+        font-size: clamp(1.9rem, 10dvw, 10rem);
+        color: var(--primaryAlt);
+        text-wrap: pretty;
+    }
+
+    &.pageTitleSmall {
+        font-size: clamp(1.9rem, 2.75vw, 2.75rem);
+        color: var(--primaryAlt);
+        text-wrap: pretty;
+    }
+}
+
+h2 {
+    font-size: 1.5rem;
+
+    &.sectionTitle {
+        font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+        line-height: 120%;
+        color: var(--primaryAlt);
+
+        &.colorLight {
+            color: var(--light);
+        }
+    }
+
+    &.sectionTitleContained {
+        @media (width >=1024px) {
+            max-width: 27ch !important;
+        }
+    }
+}
+
+h3 {
+    font-size: clamp(1.1rem, 1.25vw, 1.25rem);
+    line-height: 125%;
+}
+
+h4 {
+    font-size: 1.125rem;
+    line-height: 120%;
+}
+
+h5 {
+    font-size: 1rem;
+    line-height: 115%;
+}
+
+h6 {
+    font-size: 0.875rem;
+    line-height: 110%;
+}
+
+/*
+* =============================================
+* Text, lists, inputs, links
+* ============================================= 
+*/
+
+small,
+p,
+ul,
+ol {
+    font-size: clamp(1rem, 1.25vw, 1.25rem);
+    line-height: 165%;
+    text-wrap: pretty;
+    font-weight: 300;
+    letter-spacing: -0.02em;
+
+    @media (width >=576px) and (width < 1024px) {
+        text-align: center;
+    }
+}
+
+ul:not(.splide__list) {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0.75rem;
+    padding: 0 0 1rem 1.5rem;
+    list-style: square;
+
+    @media (width >=576px) and (width < 1024px) {
+        align-items: center;
+    }
+
+    @media (width >=1280px) {
+        padding: 0.5rem 0 1.5rem 2.5rem;
+    }
+
+    li {
+        &::marker {
+            color: var(--primary);
+        }
+    }
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    padding: 0;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &.large {
+        font-size: clamp(1rem, 1.25vw, 1.25rem);
+        line-height: 150%;
+    }
+
+    &.extraLarge {
+        font-size: clamp(1.25rem, 1.5vw, 1.5rem);
+    }
+}
+
+ul {
+    margin: 0;
+}
+
+// Font Weights
+.fw300 {
+    font-weight: 300 !important;
+}
+
+.fw400 {
+    font-weight: 400 !important;
+}
+
+.fw500 {
+    font-weight: 500 !important;
+}
+
+.fw600 {
+    font-weight: 600 !important;
+}
+
+.fw700 {
+    font-weight: 700 !important;
+}
+
+// Font Styles
+.italic {
+    font-style: italic !important;
+}

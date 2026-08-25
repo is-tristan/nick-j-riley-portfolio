@@ -1,0 +1,105 @@
+.header {
+    display: flex;
+    z-index: 999;
+    width: 100%;
+    position: fixed;
+    border-bottom: 1px solid var(--color--border);
+    background: var(--color--background);
+
+    .headerContainer {
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 1rem;
+        padding-bottom: 0.5rem;
+        height: var(--mobileHeaderHeight);
+        position: relative;
+
+        @media (width >=1024px) {
+            height: var(--headerHeight);
+            gap: 1.5rem;
+        }
+    }
+}
+
+// Header Logo
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    position: relative;
+    color: var(--primary);
+    transition: var(--quickEase);
+
+    @media (width >=1024px) {
+        min-width: 6.5rem;
+    }
+
+    &:hover {
+        color: rgba(var(--primaryRgb), 0.875);
+    }
+
+    &:focus,
+    &:active {
+        color: var(--primary);
+    }
+
+    svg {
+        width: auto;
+        height: 100%;
+    }
+}
+
+// Header Buttons
+.headerActions {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+
+    @media (width >=1024px) {
+        padding: 0 1rem;
+        height: 3.5rem;
+        background: var(--color--background);
+        border: 1px solid rgba(var(--lightRgb), 0.1);
+        border-radius: calc(var(--borderRadius) * 5);
+    }
+
+    .headerButtons {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 0.75rem;
+
+        @media (width >=576px) {
+            gap: 1rem;
+        }
+
+        .primaryBtn {
+            padding: 0.5rem;
+
+            @media (width >=1024px) {
+                padding: 0.66rem;
+            }
+
+            >div {
+                @media (width < 768px) {
+                    display: none;
+                }
+            }
+
+            svg {
+                width: 0.875rem;
+                height: 0.875rem;
+
+                @media (width >=1024px) {
+                    width: 1rem;
+                    height: 1rem;
+                }
+            }
+        }
+    }
+}

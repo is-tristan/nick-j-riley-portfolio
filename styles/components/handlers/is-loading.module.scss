@@ -1,0 +1,52 @@
+.isLoading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.isLoadingRing {
+    box-sizing: border-box;
+    display: inline-block;
+    position: relative;
+    width: 5rem;
+    height: 5rem;
+    color: var(--primary);
+
+    div {
+        box-sizing: border-box;
+        display: block;
+        position: absolute;
+        width: 4rem;
+        height: 4rem;
+        margin: 0.5rem;
+        border: 0.5rem solid currentColor;
+        border-radius: 50%;
+        animation: isLoadingRing 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+        border-color: currentColor transparent transparent transparent;
+
+        &:nth-child(1) {
+            animation-delay: -0.45s;
+        }
+
+        &:nth-child(2) {
+            animation-delay: -0.3s;
+        }
+
+        &:nth-child(3) {
+            animation-delay: -0.15s;
+        }
+    }
+
+    @keyframes isLoadingRing {
+
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+}

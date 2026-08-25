@@ -1,0 +1,51 @@
+.privacyPolicyContainer {
+    gap: 1.25rem;
+}
+
+.privacyPolicySection {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+
+    p {
+        margin-bottom: 0;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding-left: 1.25rem;
+    }
+
+    li {
+        line-height: 1.6;
+    }
+}
+
+.tableContainer {
+    width: 100%;
+    overflow-x: auto;
+
+    table {
+        width: 100%;
+        min-width: 50rem;
+        border-collapse: collapse;
+    }
+
+    th,
+    td {
+        padding: 0.75rem;
+        border: 0.0625rem solid currentColor;
+        text-align: left;
+        vertical-align: top;
+    }
+
+    th {
+        font-weight: 600;
+    }
+}
+
+.cookieGroup {
+    background: rgba(0, 0, 0, 0.05);
+}
