@@ -39,6 +39,8 @@
             display: flex;
             flex-flow: column nowrap;
             gap: 1rem;
+            font-weight: 600;
+            letter-spacing: -0.03em;
 
             @media (width >=1024px) {
                 margin: 0.75rem 0 1.5rem;
