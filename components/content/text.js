@@ -10,7 +10,7 @@ import Button from "../handlers/buttons";
 export default function Heading({
     hasAnimation = true,
     className = undefined,
-    headingClass = undefined,
+    titleClass = undefined,
     contentClass = undefined,
     alignment = "default",
     title = null,
@@ -67,17 +67,17 @@ export default function Heading({
                     {(() => {
                         switch (titleTag) {
                             case "h1":
-                                return <h1 className={headingClass} dangerouslySetInnerHTML={{ __html: title }} />;
+                                return <h1 className={titleClass} dangerouslySetInnerHTML={{ __html: title }} />;
                             case "h2":
-                                return <h2 className={headingClass} dangerouslySetInnerHTML={{ __html: title }} />;
+                                return <h2 className={titleClass} dangerouslySetInnerHTML={{ __html: title }} />;
                             case "h3":
-                                return <h3 className={headingClass} dangerouslySetInnerHTML={{ __html: title }} />;
+                                return <h3 className={titleClass} dangerouslySetInnerHTML={{ __html: title }} />;
                             case "h4":
-                                return <h4 className={headingClass} dangerouslySetInnerHTML={{ __html: title }} />;
+                                return <h4 className={titleClass} dangerouslySetInnerHTML={{ __html: title }} />;
                             case "h5":
-                                return <h5 className={headingClass} dangerouslySetInnerHTML={{ __html: title }} />;
+                                return <h5 className={titleClass} dangerouslySetInnerHTML={{ __html: title }} />;
                             case "h6":
-                                return <h6 className={headingClass} dangerouslySetInnerHTML={{ __html: title }} />;
+                                return <h6 className={titleClass} dangerouslySetInnerHTML={{ __html: title }} />;
                             default:
                                 return null;
                         }

@@ -30,7 +30,7 @@ export default function Banner({
 
                         <Text
                             hasAnimation={false}
-                            headingClass={`pageTitle`}
+                            titleClass={`pageTitle`}
                             titleTag="h1"
                             title={title}
                             description={description}

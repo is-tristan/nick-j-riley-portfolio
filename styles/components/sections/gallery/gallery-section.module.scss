@@ -1,0 +1,22 @@
+.galleryGrid {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    .galleryItem {
+        flex: 1 1 calc(calc(100% / 2) - 1rem);
+        border-right: 1px solid var(--border);
+
+        &::last-child {
+            border-right: none;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

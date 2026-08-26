@@ -43,9 +43,20 @@
     }
 }
 
-// Has Border
-.hasBorder {
-    border: 1px solid var(--color--border);
+.borderTop {
+    border-top: 1px solid var(--border);
+}
+
+.borderRight {
+    border-right: 1px solid var(--border);
+}
+
+.borderBottom {
+    border-bottom: 1px solid var(--border);
+}
+
+.borderLeft {
+    border-left: 1px solid var(--border);
 }
 
 // Has Link

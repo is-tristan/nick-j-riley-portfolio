@@ -16,11 +16,11 @@
     }
 
     &.borderTop {
-        border-top: 1px solid var(--color--border);
+        border-top: 1px solid var(--border);
     }
 
     &.borderBottom {
-        border-bottom: 1px solid var(--color--border);
+        border-bottom: 1px solid var(--border);
     }
 }
 
@@ -259,8 +259,24 @@
     gap: 1rem;
     padding: 2dvh 1.75dvh;
 
+    @media (width >=768px) {
+        padding: 2.5dvh 3dvw;
+    }
+
     @media (width >=1024px) {
-        padding: 2dvw;
+        padding: 3dvh 3dvw;
+    }
+
+    @media (width >=1440px) {
+        padding: 4dvh 4dvw;
+    }
+
+    @media (width >=1920px) {
+        padding: 5dvh 5dvw;
+    }
+
+    @media (width >=2560px) {
+        padding: 6dvh 6dvw;
     }
 
     &[data-alignment="centered"] {

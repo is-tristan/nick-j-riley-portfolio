@@ -14,7 +14,7 @@
         display: block;
         width: 100%;
         height: 2px;
-        background: var(--color--text);
+        background: var(--text);
     }
 }
 
@@ -33,7 +33,7 @@
     visibility: hidden;
     transform: translateX(100%);
     background: var(--primaryAlt);
-    color: var(--color--text);
+    color: var(--text);
     padding: 1rem 2rem;
 
     &[data-toggled="true"] {

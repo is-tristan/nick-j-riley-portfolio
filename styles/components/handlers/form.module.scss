@@ -28,7 +28,7 @@
     }
 
     * {
-        font-family: var(--text);
+        font-family: var(--body);
         font-weight: 500;
         text-align: left;
     }
@@ -160,7 +160,7 @@
 
             option {
                 color: var(--dark);
-                background: var(--color--background);
+                background: var(--background);
             }
 
             &:invalid {

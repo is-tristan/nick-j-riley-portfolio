@@ -11,14 +11,14 @@ h4,
 h5,
 h6 {
     font-family: var(--heading);
-    font-weight: 700;
+    font-weight: 900;
     line-height: 100%;
     margin: 0;
     padding: 0;
     text-wrap: balance;
     letter-spacing: -0.03em;
     text-transform: uppercase;
-    color: var(--color--title);
+    color: var(--title);
 
     @media (width >=576px) and (width < 1024px) {
         text-align: center;
@@ -30,14 +30,12 @@ h1 {
     font-size: 1.75rem;
 
     &.pageTitle {
-        font-size: clamp(1.9rem, 10dvw, 10rem);
-        color: var(--primaryAlt);
+        font-size: clamp(1.9rem, 9dvw, 9rem);
         text-wrap: pretty;
     }
 
     &.pageTitleSmall {
         font-size: clamp(1.9rem, 2.75vw, 2.75rem);
-        color: var(--primaryAlt);
         text-wrap: pretty;
     }
 }
@@ -46,7 +44,7 @@ h2 {
     font-size: 1.5rem;
 
     &.sectionTitle {
-        font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+        font-size: clamp(1.5rem, 5dvw, 5rem);
         line-height: 120%;
         color: var(--primaryAlt);
 

@@ -4,8 +4,8 @@
     @include btn();
 
     &.primary {
-        background: var(--color--button--background);
-        color: var(--color-button-text);
+        background: var(--buttonBackground);
+        color: var(--buttonText);
     }
 
     &.transparent {
@@ -15,8 +15,8 @@
         box-shadow: none;
 
         &:hover {
-            background: var(--color--light);
-            color: var(--color--dark);
+            background: var(--light);
+            color: var(--dark);
         }
     }
 
@@ -33,7 +33,7 @@
     }
 
     &.light {
-        background: var(--color--background);
+        background: var(--background);
         color: var(--primaryAlt);
         border-color: var(--light);
     }

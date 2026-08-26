@@ -2,7 +2,7 @@
     display: flex;
     flex-flow: row wrap;
     width: 100%;
-    border: solid var(--color--border);
+    border: solid var(--border);
     border-width: 1px 0 0 1px;
 
     .logoItem {
@@ -13,17 +13,18 @@
         aspect-ratio: 1 / 1;
         flex-basis: calc(100% / 3);
         padding: 1rem;
-        border-right: 1px solid var(--color--border);
-        border-bottom: 1px solid var(--color--border);
+        border-right: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
 
         @media (width >=1024px) {
-            flex-basis: calc(100% / 5);
-            padding: 5dvw;
+            flex-basis: calc(100% / 10);
+            padding: 2dvw;
         }
 
         img {
             width: 100%;
             height: 100%;
+            max-height: 3rem;
             object-fit: contain;
         }
     }
