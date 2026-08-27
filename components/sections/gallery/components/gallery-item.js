@@ -20,7 +20,7 @@ export default function GalleryItem({ image, isInView, delay = 0.1 }) {
             transition={{ duration: 0.5, delay: delay }}
         >
 
-            <Image src={image.image} alt={image.alt} width={384} height={683} />
+            <Image src={image.image} alt={image.alt} width={384} height={683} loading="lazy" />
 
         </motion.div>
 

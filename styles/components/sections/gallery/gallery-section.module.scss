@@ -6,8 +6,11 @@
     width: 100%;
 
     .galleryItem {
-        flex: 1 1 calc(calc(100% / 2) - 1rem);
         border-right: 1px solid var(--border);
+
+        @media (width >= 768px) {
+            flex: 1 1 calc(calc(100% / 2) - 1rem);
+        }
 
         &::last-child {
             border-right: none;

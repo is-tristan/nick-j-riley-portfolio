@@ -28,6 +28,7 @@ h6 {
 
 h1 {
     font-size: 1.75rem;
+    color: var(--light);
 
     &.pageTitle {
         font-size: clamp(1.9rem, 9dvw, 9rem);
@@ -44,13 +45,8 @@ h2 {
     font-size: 1.5rem;
 
     &.sectionTitle {
-        font-size: clamp(1.5rem, 5dvw, 5rem);
+        font-size: clamp(1.5rem, 6dvw, 6rem);
         line-height: 120%;
-        color: var(--primaryAlt);
-
-        &.colorLight {
-            color: var(--light);
-        }
     }
 
     &.sectionTitleContained {
@@ -90,8 +86,8 @@ small,
 p,
 ul,
 ol {
-    font-size: clamp(1rem, 1.25vw, 1.25rem);
-    line-height: 165%;
+    font-size: clamp(1rem, 1.25dvw, 1.25rem);
+    line-height: 160%;
     text-wrap: pretty;
     font-weight: 300;
     letter-spacing: -0.02em;
@@ -133,12 +129,8 @@ p {
     }
 
     &.large {
-        font-size: clamp(1rem, 1.25vw, 1.25rem);
+        font-size: clamp(1.25rem, 1.5dvw, 1.5rem);
         line-height: 150%;
-    }
-
-    &.extraLarge {
-        font-size: clamp(1.25rem, 1.5vw, 1.5rem);
     }
 }
 
@@ -165,9 +157,4 @@ ul {
 
 .fw700 {
     font-weight: 700 !important;
-}
-
-// Font Styles
-.italic {
-    font-style: italic !important;
 }

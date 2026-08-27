@@ -20,7 +20,7 @@ export default function LogoItem({ logo, isInView, delay = 0.1 }) {
             transition={{ duration: 0.5, delay: delay }}
         >
 
-            <Image src={logo.image} alt={logo.name} width={128} height={128} />
+            <Image src={logo.image} alt={logo.name} width={128} height={128} loading="lazy" />
 
         </motion.div>
 

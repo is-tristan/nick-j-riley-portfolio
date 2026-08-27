@@ -13,16 +13,6 @@ const satoshi = localFont({
       style: "normal",
     },
     {
-      path: "../public/fonts/satoshi/Satoshi-Medium.woff2",
-      weight: "500",
-      style: "normal",
-    },
-    {
-      path: "../public/fonts/satoshi/Satoshi-Bold.woff2",
-      weight: "700",
-      style: "normal",
-    },
-    {
       path: "../public/fonts/satoshi/Satoshi-Black.woff2",
       weight: "900",
       style: "normal",

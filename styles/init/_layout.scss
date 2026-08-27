@@ -5,23 +5,10 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 1.5rem;
     width: 100%;
     height: max-content;
     position: relative;
     overflow: hidden;
-
-    @media (width >=1024px) {
-        gap: 2rem;
-    }
-
-    &.borderTop {
-        border-top: 1px solid var(--border);
-    }
-
-    &.borderBottom {
-        border-bottom: 1px solid var(--border);
-    }
 }
 
 // Container

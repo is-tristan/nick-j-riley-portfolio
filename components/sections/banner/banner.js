@@ -1,7 +1,6 @@
 // Components
 import Eyebrow from "@/components/decoration/eyebrow";
 import Text from "@/components/content/text";
-import Button from "@/components/handlers/buttons";
 
 // Styles
 import styles from "@/styles/components/sections/banner/banner.module.scss";
