@@ -7,8 +7,8 @@ import styles from "@/styles/components/sections/banner/banner.module.scss";
 
 export default function Banner({
     eyebrow = null,
-    title = "<span class='fw300'>Aerial</span> <br> Photography",
-    description = "<p>Cape Town · Western Cape · Available for Direct & Production Hire</p>",
+    title = "<span class='fw300'>Aerial</span> <br> Cinematography",
+    description = "<p>Cape Town · Film & Advertising Production · Available for Freelance Hire</p>",
 }) {
 
     return (

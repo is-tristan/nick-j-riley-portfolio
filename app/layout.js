@@ -27,8 +27,8 @@ import "@/styles/main.scss";
 
 // Metadata
 export const metadata = {
-  title: "Professional Drone Pilot & Aerial Cinematographer | Cape Town",
-  description: "Experienced Cape Town drone pilot with 6+ years in professional aerial production. Available for direct hire, commercial work, photography, videography and film.",
+  title: "Nick Riley | Drone Pilot & Aerial Cinematographer | South Africa",
+  description: "Nick Riley is a South African drone pilot with 6 years of film and advertising production experience for major brands. Available for freelance aerial cinematography through his affiliate production company.",
 };
 
 // Components

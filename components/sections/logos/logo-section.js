@@ -1,45 +1,33 @@
-"use client";
-
-// Imports
-import { useRef } from "react";
-import { useInView } from "motion/react";
-
 // Components
-import LogoItem from "./components/logo-item";
+import LogoGrid from "./components/logo-grid";
+import Text from "@/components/content/text";
 import Eyebrow from "@/components/decoration/eyebrow";
 
 // Styles
 import styles from "@/styles/components/sections/logos/logo-section.module.scss"
 
-// Data
-import { logos } from "@/data/logo-data";
-
 export default function LogoSection() {
-
-    const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, amount: 0.25 });
 
     return (
 
-        <section id="logos" className={`row borderBottom ${styles.logoSection}`} ref={ref}>
+        <section id="logos" className={`row borderBottom ${styles.logoSection}`}>
 
             <div className={`container`}>
 
                 <div className={`contentContainer`} data-alignment="centered">
 
-                    <Eyebrow text="Brands I've Worked With" type={"large"} />
+                    <Eyebrow text="Brands I've Worked With" />
+
+                    <Text
+                        hasAnimation={false}
+                        titleClass={`sectionTitle`}
+                        titleTag="h2"
+                        title={"<span class='fw300'>Previous</span> Clients"}
+                    />
 
                 </div>
 
-                <div className={`${styles.logoGrid}`}>
-
-                    {logos.map((logo, index) => (
-
-                        <LogoItem key={logo.id} logo={logo} isInView={isInView} delay={0.1 + index * 0.05} />
-
-                    ))}
-
-                </div>
+                <LogoGrid />
 
             </div>
 
