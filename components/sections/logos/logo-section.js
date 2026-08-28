@@ -10,9 +10,9 @@ export default function LogoSection() {
 
     return (
 
-        <section id="logos" className={`row borderBottom ${styles.logoSection}`}>
+        <section id="logos" className={`row ${styles.logoSection}`}>
 
-            <div className={`container`}>
+            <div className={`borderLeft borderRight container`}>
 
                 <div className={`contentContainer`} data-alignment="centered">
 
@@ -27,7 +27,15 @@ export default function LogoSection() {
 
                 </div>
 
-                <LogoGrid />
+            </div>
+
+            <div className={`borderTop`}>
+
+                <div className={`container`}>
+
+                    <LogoGrid />
+
+                </div>
 
             </div>
 

@@ -8,7 +8,7 @@ import styles from "@/styles/components/sections/content/content.module.scss"
 export default function Content({
     eyebrow = "About",
     title = "<span class='fw300'>About</span> Nick",
-    description = "<p>Nick Riley is an experienced drone pilot with six years of production experience flying for some of the biggest names in South African film and advertising. He has worked with numerous major brands, consistently delivering above expectation on commercials and film productions. Available for freelance hire, Nick works with production-level companies and quotes jobs through his affiliate production company, which supplies the drones needed for each shoot.</p>"
+    description = "<p>Nick Riley is an experienced drone pilot with six years of production experience flying for some of the biggest names in South African film and advertising. He has worked with numerous major brands, consistently delivering above expectation on commercials and film productions. Available for freelance hire, Nick works with production companies and agencies on aerial cinematography across Cape Town and South Africa.</p>"
 }) {
 
     return (

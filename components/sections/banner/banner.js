@@ -40,14 +40,20 @@ export default function Banner({
 
                 </div>
 
-                <video
-                    src="/videos/banner/temp-banner-video.webm"
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    className={styles.bannerVideo}
-                />
+                <div className={styles.bannerVideoContainer}>
+
+                    <video
+                        src="/videos/banner/xp-01-banner-video-02.webm"
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        className={styles.bannerVideo}
+                        preload="none"
+                        poster="/images/banner/xp-01-banner-video-poster.webp"
+                    />
+
+                </div>
 
             </div>
 

@@ -12,7 +12,7 @@
             flex: 1 1 calc(calc(100% / 2) - 1rem);
         }
 
-        &::last-child {
+        &:last-child {
             border-right: none;
         }
 

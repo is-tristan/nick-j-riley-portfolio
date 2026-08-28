@@ -10,7 +10,7 @@ export default function PreviousWork() {
 
     return (
 
-        <section className={`row ${styles.previousWork}`}>
+        <section id="previous-work" className={`row ${styles.previousWork}`}>
 
             <div className={`borderLeft borderRight container noPaddingBottom`}>
 

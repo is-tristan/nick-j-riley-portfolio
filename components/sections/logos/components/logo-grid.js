@@ -21,11 +21,11 @@ export default function LogoGrid() {
 
     return (
 
-        <div className={`${styles.logoGrid}`} ref={ref}>
+        <div className={`borderLeft ${styles.logoGrid}`} ref={ref}>
 
             {logos.map((logo, index) => (
 
-                <LogoItem key={logo.id} logo={logo} isInView={isInView} delay={0.1 + index * 0.05} />
+                <LogoItem key={logo.id} logo={logo} isInView={isInView} delay={0.1 + index * 0.025} />
 
             ))}
 
