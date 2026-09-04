@@ -1,27 +1,34 @@
 export const menuItemsData = [
     {
-        label: "Label #1",
-        href: "#",
-        submenu: null,
+        label: "Home",
+        href: "#banner",
     },
     {
-        label: "Label #2",
-        href: "#",
-        submenu: null,
+        label: "About",
+        href: "#content",
     },
     {
-        label: "Label #3",
-        href: "#",
-        submenu: null,
+        label: "Gallery",
+        href: "#gallery",
     },
     {
-        label: "Label #4",
-        href: "#",
-        submenu: null,
+        label: "Previous Work",
+        href: "#previous-work",
     },
     {
-        label: "Label #5",
-        href: "#",
-        submenu: null,
+        label: "Clients",
+        href: "#logos",
+    },
+    {
+        label: "Flight Log",
+        href: "#drones",
+    },
+    {
+        label: "Titles",
+        href: "#titles",
+    },
+    {
+        label: "Contact",
+        href: "#contact",
     },
 ]

@@ -33,6 +33,7 @@ export const metadata = {
 
 // Components
 import Header from "@/components/layouts/header/header";
+import Footer from "@/components/layouts/footer/footer";
 import SmoothScroll from "@/components/handlers/smooth-scroll";
 
 export default function RootLayout({ children }) {
@@ -54,6 +55,8 @@ export default function RootLayout({ children }) {
               {children}
 
             </main>
+
+            <Footer />
 
           </div>
 

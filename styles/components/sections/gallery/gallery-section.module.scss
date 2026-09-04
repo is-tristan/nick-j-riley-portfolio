@@ -7,8 +7,9 @@
 
     .galleryItem {
         border-right: 1px solid var(--border);
+        aspect-ratio: 2 / 3;
 
-        @media (width >= 768px) {
+        @media (width >=768px) {
             flex: 1 1 calc(calc(100% / 2) - 1rem);
         }
 

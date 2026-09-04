@@ -1,23 +1,5 @@
 @use "../../init/mixins" as *;
 
-.formContainer {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
-
-    @media (width >=1024px) {
-        min-height: 36rem;
-    }
-
-    .formTitle {
-        font-weight: 700;
-        font-size: clamp(1.25rem, 1.5vw, 1.5rem);
-        color: var(--primaryAlt);
-    }
-}
-
 .form {
     display: flex;
     flex-flow: row wrap;
@@ -32,53 +14,10 @@
         font-weight: 400;
         text-align: left;
     }
+}
 
-    &[data-theme="light"] {
-
-        label,
-        legend {
-            color: var(--primaryAlt);
-        }
-
-        input,
-        textarea,
-        select {
-            border-color: var(--primaryAlt) !important;
-            color: var(--primaryAlt) !important;
-
-            &::placeholder {
-                color: rgba(var(--primaryAltRgb), 0.75) !important;
-            }
-        }
-
-        select {
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%234A2257' d='M1.41 0L6 4.58 10.59 0 12 1.41l-6 6-6-6z'/%3E%3C/svg%3E");
-
-            &:invalid {
-                color: rgba(var(--primaryAltRgb), 0.75) !important;
-            }
-        }
-
-        .submit {
-            background: var(--primaryAlt);
-            color: var(--light);
-            border-color: var(--primaryAlt);
-
-            &:hover {
-                background: rgba(var(--primaryAltRgb), 0.9);
-            }
-        }
-
-        .demoLink {
-            color: var(--primaryAlt);
-        }
-
-        .result {
-            span {
-                color: var(--primaryAlt);
-            }
-        }
-    }
+.botcheck {
+    display: none;
 }
 
 .fieldset {
@@ -108,21 +47,44 @@
         }
     }
 
+    .radioGroup {
+        display: flex;
+        flex-flow: row wrap;
+        gap: 0.75rem 1.25rem;
+    }
+
+    .radioOption {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        gap: 0.5rem;
+        cursor: pointer;
+        color: var(--light);
+        font-size: 0.875rem;
+
+        input[type="radio"] {
+            width: 1rem;
+            height: 1rem;
+            accent-color: var(--secondary);
+            cursor: pointer;
+        }
+    }
+
     .field {
         display: flex;
         align-items: center;
         position: relative;
 
-        input:not([type="checkbox"]),
+        input:not([type="checkbox"]):not([type="radio"]),
         textarea,
         select {
             display: flex;
             align-items: center;
             width: 100%;
-            padding: 0.75rem;
-            border-radius: var(--borderRadius);
+            padding: 1rem;
+            border-radius: calc(var(--borderRadius) * 0.25);
             border: 1px solid rgba(var(--lightRgb), 0.25);
-            background: rgba(var(--lightRgb), 0.1);
+            background-color: transparent;
             color: var(--light);
             transition: all 0.1s ease;
 
@@ -140,7 +102,8 @@
 
             &:focus,
             &:active {
-                outline: 2px solid var(--secondary);
+                background-color: var(--backgroundAlt);
+                outline: 2px solid var(--border);
                 outline-offset: 2px;
             }
 
@@ -149,7 +112,7 @@
         select {
             appearance: none;
             cursor: pointer;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%234a2257' d='M1.41 0L6 4.58 10.59 0 12 1.41l-6 6-6-6z'/%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23777777' d='M1.41 0L6 4.58 10.59 0 12 1.41l-6 6-6-6z'/%3E%3C/svg%3E");
             background-repeat: no-repeat;
             background-position: right 1rem center;
             padding-right: 2.5rem;
@@ -159,7 +122,7 @@
             }
 
             option {
-                color: var(--dark);
+                color: var(--light);
                 background: var(--background);
             }
 
@@ -251,11 +214,12 @@
 
     .submit {
         @include btn();
-        background: var(--primary);
+        background: rgba(var(--backgroundAltRgb), 0.75);
         color: var(--light);
 
         &:hover {
-            background: rgba(var(--primaryRgb), 0.9);
+            scale: 1.025;
+            background: rgba(var(--backgroundAltRgb), 1);
         }
     }
 

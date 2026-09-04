@@ -1,28 +1,28 @@
 // Components
-import LogoGrid from "./components/logo-grid";
+import TitleGrid from "./components/title-grid";
 import Text from "@/components/content/text";
 import Eyebrow from "@/components/decoration/eyebrow";
 
 // Styles
-import styles from "@/styles/components/sections/logos/logo-section.module.scss"
+import styles from "@/styles/components/sections/titles/titles-section.module.scss"
 
-export default function LogoSection() {
+export default function TitlesSection() {
 
     return (
 
-        <section id="logos" className={`row borderBottom ${styles.logoSection}`}>
+        <section id="titles" className={`row borderBottom ${styles.titlesSection}`}>
 
             <div className={`borderLeft borderRight container`}>
 
                 <div className={`contentContainer`} data-alignment="centered">
 
-                    <Eyebrow text="Brands I've Worked With" />
+                    <Eyebrow text="Film & TV series" />
 
                     <Text
                         hasAnimation={false}
                         titleClass={`sectionTitle`}
                         titleTag="h2"
-                        title={"<span class='fw300'>Previous</span> Clients"}
+                        title={"<span class='fw300'>Titles</span> I've Worked On"}
                     />
 
                 </div>
@@ -31,7 +31,7 @@ export default function LogoSection() {
 
             <div className={`container`}>
 
-                <LogoGrid />
+                <TitleGrid />
 
             </div>
 
