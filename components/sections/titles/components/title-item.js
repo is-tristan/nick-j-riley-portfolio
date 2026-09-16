@@ -18,7 +18,7 @@ export default function TitleItem({ title, isInView, delay = 0.1 }) {
 
     return (
 
-        <motion.figure
+        <motion.div
             className={`${styles.titleItem}`}
             animate={isInView ? fadeUpVisible : fadeUpHidden}
             initial={fadeUpHidden}
@@ -35,7 +35,7 @@ export default function TitleItem({ title, isInView, delay = 0.1 }) {
 
             </figcaption>
 
-        </motion.figure>
+        </motion.div>
 
     )
 }

@@ -27,14 +27,13 @@ export default function Banner({
 
                         {eyebrow && (<Eyebrow text={eyebrow} hasDash={true} hasAnimation={false} />)}
 
-                        <Text
-                            hasAnimation={false}
-                            titleClass={`pageTitle`}
-                            titleTag="h1"
-                            title={title}
-                            description={description}
-                            descriptionClass={`extraLarge colorLight`}
-                        />
+                        <div className={`innerContent`}>
+
+                            <h1 className={`pageTitle`} dangerouslySetInnerHTML={{ __html: title }} />
+
+                            <p className={`extraLarge colorLight`} dangerouslySetInnerHTML={{ __html: description }} />
+
+                        </div>
 
                     </div>
 
