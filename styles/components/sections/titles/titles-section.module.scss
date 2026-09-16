@@ -3,6 +3,10 @@
     flex-flow: row wrap;
     width: 100%;
 
+    @media (width >=1280px) {
+        flex-flow: row nowrap;
+    }
+
     .titleItem {
         display: flex;
         justify-content: center;
