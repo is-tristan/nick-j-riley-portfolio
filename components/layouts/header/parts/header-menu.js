@@ -88,7 +88,7 @@ export default function HeaderMenu({ isOpen = false, onClose }) {
 
                 <div className={styles.menuHeader}>
 
-                    <Link href="/" className={styles.menuLogo} aria-label="Home" dangerouslySetInnerHTML={{ __html: logo }} />
+                    <Link href="/" className={styles.menuLogo} aria-label="Nick Riley — home" dangerouslySetInnerHTML={{ __html: logo }} />
 
                     <button type="button" className={`${styles.menuToggle} ${styles.menuClose}`} onClick={onClose} aria-label="Close menu" dangerouslySetInnerHTML={{ __html: closeIcon }} />
 

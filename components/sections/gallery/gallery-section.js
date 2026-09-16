@@ -8,7 +8,7 @@ export default function GallerySection() {
 
     return (
 
-        <section id="gallery" className={`row borderBottom ${styles.gallerySection}`}>
+        <section id="gallery" className={`row borderBottom ${styles.gallerySection}`} aria-label="Photo gallery of Nick Riley on production">
 
             <div className={`container`}>
 

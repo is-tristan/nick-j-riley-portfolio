@@ -50,7 +50,8 @@ export default function Banner({
                         playsInline
                         className={styles.bannerVideo}
                         preload="none"
-                        poster="/images/banner/xp-01-banner-video-poster.webp"
+                        poster="/videos/banner/xp-01-banner-video-poster.webp"
+                        aria-label="Aerial cinematography showreel by Nick Riley"
                     />
 
                 </div>

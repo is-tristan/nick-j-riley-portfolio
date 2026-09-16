@@ -19,10 +19,6 @@ h6 {
     letter-spacing: -0.03em;
     text-transform: uppercase;
     color: var(--title);
-
-    @media (width >=576px) and (width < 1024px) {
-        text-align: center;
-    }
 }
 
 
@@ -45,19 +41,19 @@ h2 {
     font-size: 1.5rem;
 
     &.sectionTitle {
-        font-size: clamp(1.5rem, 6dvw, 6rem);
+        font-size: clamp(2rem, 5dvw, 5rem);
         line-height: 120%;
     }
 
     &.sectionTitleContained {
-        @media (width >=1024px) {
+        @media (width >=768px) {
             max-width: 27ch !important;
         }
     }
 }
 
 h3 {
-    font-size: clamp(1.1rem, 1.25vw, 1.25rem);
+    font-size: clamp(1rem, 1.25vw, 1.25rem);
     line-height: 125%;
 }
 
@@ -86,15 +82,11 @@ small,
 p,
 ul,
 ol {
-    font-size: clamp(1rem, 1.25dvw, 1.25rem);
-    line-height: 160%;
+    font-size: clamp(1.05rem, 1.25dvw, 1.25rem);
+    line-height: 150%;
     text-wrap: pretty;
     font-weight: 300;
     letter-spacing: -0.02em;
-
-    @media (width >=576px) and (width < 1024px) {
-        text-align: center;
-    }
 }
 
 ul:not(.splide__list) {

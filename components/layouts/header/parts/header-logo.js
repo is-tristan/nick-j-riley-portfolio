@@ -11,7 +11,7 @@ export default function HeaderLogo() {
 
     return (
 
-        <Link href="/" className={styles.logo} aria-label="Home" dangerouslySetInnerHTML={{ __html: logo }} />
+        <Link href="/" className={styles.logo} aria-label="Nick Riley — home" dangerouslySetInnerHTML={{ __html: logo }} />
 
     )
 

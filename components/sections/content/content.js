@@ -13,13 +13,13 @@ export default function Content({
 
     return (
 
-        <section id="content" className={`row borderBottom ${styles.content}`} role="main">
+        <section id="content" className={`row borderBottom ${styles.content}`} aria-label="About Nick Riley">
 
             <div className={`container dualCols`}>
 
                 <div className={`contentCol borderRight borderLeft`}>
 
-                    <div className={`contentContainer`}>
+                    <div className={`contentContainer mobileNoPaddingBottom`}>
 
                         <Eyebrow text={eyebrow} />
 
@@ -35,7 +35,7 @@ export default function Content({
 
                 <div className={`contentCol borderRight`}>
 
-                    <div className={`contentContainer`}>
+                    <div className={`contentContainer mobileNoPaddingTop`}>
 
                         <Text
                             title={null}

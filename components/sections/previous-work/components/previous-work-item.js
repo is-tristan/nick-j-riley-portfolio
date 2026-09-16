@@ -8,6 +8,9 @@ import Image from "next/image";
 
 // Imports
 import { motion } from "motion/react";
+
+// Utils
+import { fadeUpHidden, fadeUpVisible } from "@/utils/fade-up";
 import { useLenis } from "lenis/react";
 
 // Styles
@@ -95,8 +98,8 @@ export default function PreviousWorkItem({ data, isInView, index }) {
         <>
 
             <motion.article
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
-                initial={{ opacity: 0, y: 16 }}
+                animate={isInView ? fadeUpVisible : fadeUpHidden}
+                initial={fadeUpHidden}
                 transition={{ duration: 0.5, delay: 0.1 + index * 0.05 }}
                 key={data.id}
                 className={styles.previousWorkItem}

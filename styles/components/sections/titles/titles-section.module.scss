@@ -7,6 +7,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        position: relative;
         width: 100%;
         aspect-ratio: 2 / 3;
         flex-basis: calc(100% / 2);
@@ -25,6 +26,18 @@
             width: 100%;
             height: 100%;
             object-fit: contain;
+        }
+
+        .titleCaption {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
         }
     }
 }

@@ -3,6 +3,9 @@
 // Imports
 import { motion } from "motion/react";
 
+// Utils
+import { fadeUpHidden, fadeUpVisible } from "@/utils/fade-up";
+
 // Next
 import Image from "next/image"
 
@@ -15,8 +18,8 @@ export default function GalleryItem({ image, isInView, delay = 0.1 }) {
 
         <motion.div
             className={`${styles.galleryItem}`}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
-            initial={{ opacity: 0, y: 16 }}
+            animate={isInView ? fadeUpVisible : fadeUpHidden}
+            initial={fadeUpHidden}
             transition={{ duration: 0.5, delay: delay }}
         >
 

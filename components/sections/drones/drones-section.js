@@ -10,7 +10,7 @@ export default function DronesSection() {
 
     return (
 
-        <section id="drones" className={`row borderBottom ${styles.previousWork}`}>
+        <section id="drones" className={`row ${styles.previousWork}`}>
 
             <div className={`borderLeft borderRight container noPaddingBottom`}>
 

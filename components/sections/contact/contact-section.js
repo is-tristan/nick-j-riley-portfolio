@@ -25,16 +25,15 @@ export default function ContactSection() {
 
             <div className={`container dualCols`}>
 
-                <div className="contentCol borderRight borderLeft">
+                <div className="contentCol borderRight borderLeft noPaddingBottomMobile">
 
                     <div className={`contentContainer ${styles.titleContainer}`}>
 
                         <ProfilePicture isInView={isInView} />
 
-                        <Eyebrow text="Contact" hasDash={true} hasAnimation={false} />
+                        <Eyebrow text="Contact" hasDash={true} />
 
                         <Text
-                            hasAnimation={false}
                             titleClass={`sectionTitle`}
                             titleTag="h2"
                             title={"<span class='fw300'>Hire</span> Nick"}

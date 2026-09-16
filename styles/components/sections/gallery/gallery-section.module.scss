@@ -1,13 +1,18 @@
 .galleryGrid {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
     width: 100%;
 
+    @media (width >=768px) {
+        flex-flow: row nowrap;
+    }
+
     .galleryItem {
         border-right: 1px solid var(--border);
         aspect-ratio: 2 / 3;
+        flex: 1 1 calc(calc(100% / 3) - 1rem);
 
         @media (width >=768px) {
             flex: 1 1 calc(calc(100% / 2) - 1rem);

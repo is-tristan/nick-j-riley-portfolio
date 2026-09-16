@@ -3,6 +3,9 @@
 // Motion
 import { motion } from "motion/react";
 
+// Utils
+import { fadeUpHidden, fadeUpVisible } from "@/utils/fade-up";
+
 // Next
 import Image from "next/image";
 
@@ -18,9 +21,9 @@ export default function ProfilePicture({ isInView }) {
 
         <motion.div
             className={styles.profilePicture}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
-            initial={{ opacity: 0, y: 16 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
+            animate={isInView ? fadeUpVisible : fadeUpHidden}
+            initial={fadeUpHidden}
+            transition={{ duration: 0.5, delay: 0.075 }}
         >
 
             <Image src={profilePicture} alt="An image of Nick Riley flying a drone" width={128} height={128} />

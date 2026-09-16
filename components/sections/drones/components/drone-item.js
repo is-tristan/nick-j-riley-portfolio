@@ -4,6 +4,9 @@ import Image from "next/image";
 // Motion
 import { motion } from "motion/react";
 
+// Utils
+import { fadeUpHidden, fadeUpVisible } from "@/utils/fade-up";
+
 // Styles
 import styles from "@/styles/components/sections/drones/drones-section.module.scss";
 
@@ -12,8 +15,8 @@ export default function DroneItem({ isInView, index, data }) {
     return (
 
         <motion.div
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
-            initial={{ opacity: 0, y: 16 }}
+            animate={isInView ? fadeUpVisible : fadeUpHidden}
+            initial={fadeUpHidden}
             transition={{ duration: 0.5, delay: 0.1 + index * 0.05 }}
             className={styles.droneItem}
         >

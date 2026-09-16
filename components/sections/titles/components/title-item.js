@@ -3,6 +3,9 @@
 // Imports
 import { motion } from "motion/react";
 
+// Utils
+import { fadeUpHidden, fadeUpVisible } from "@/utils/fade-up";
+
 // Next
 import Image from "next/image"
 
@@ -11,19 +14,28 @@ import styles from "@/styles/components/sections/titles/titles-section.module.sc
 
 export default function TitleItem({ title, isInView, delay = 0.1 }) {
 
+    const titleName = title.title.trim();
+
     return (
 
-        <motion.div
+        <motion.figure
             className={`${styles.titleItem}`}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
-            initial={{ opacity: 0, y: 16 }}
+            animate={isInView ? fadeUpVisible : fadeUpHidden}
+            initial={fadeUpHidden}
             transition={{ duration: 0.5, delay: delay }}
-            title={title.title}
         >
 
-            <Image src={title.cover} alt={title.title} width={512} height={768} loading="lazy" />
+            <Image src={title.cover} alt={`${titleName} ${title.type} cover — aerial cinematography by Nick Riley`} width={512} height={768} loading="lazy" />
 
-        </motion.div>
+            <figcaption className={styles.titleCaption}>
+
+                <span className={styles.titleName}>{titleName}</span>
+
+                <span className={styles.titleType}>{title.type}</span>
+
+            </figcaption>
+
+        </motion.figure>
 
     )
 }

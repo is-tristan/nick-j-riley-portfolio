@@ -6,6 +6,9 @@ import { useState } from "react";
 // Motion
 import { motion } from "motion/react";
 
+// Utils
+import { fadeUpHidden, fadeUpVisible } from "@/utils/fade-up";
+
 // Styles
 import styles from "@/styles/components/handlers/form.module.scss";
 
@@ -23,7 +26,7 @@ export default function Form({ isInView }) {
 
         const formData = new FormData(event.target);
 
-        formData.append("access_key", "YOUR_ACCESS_KEY_HERE");
+        formData.append("access_key", "afbad1ed-734e-4428-91cc-16d97206353c");
 
         formData.append("subject", "New enquiry from Nick Riley portfolio");
 
@@ -53,8 +56,8 @@ export default function Form({ isInView }) {
     return (
 
         <motion.div
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
-            initial={{ opacity: 0, y: 16 }}
+            animate={isInView ? fadeUpVisible : fadeUpHidden}
+            initial={fadeUpHidden}
             transition={{ duration: 0.5, delay: 0.5 }}
             className={`${styles.formContainer}`}
         >

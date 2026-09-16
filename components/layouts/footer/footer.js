@@ -15,7 +15,7 @@ export default function Footer() {
 
             <div className={`container ${styles.footerContainer}`}>
 
-                <Link href="/" className={styles.footerLogo} aria-label="Home" dangerouslySetInnerHTML={{ __html: logo }} />
+                <Link href="/" className={styles.footerLogo} aria-label="Nick Riley — home" dangerouslySetInnerHTML={{ __html: logo }} />
 
                 <a
                     href="https://www.instagram.com/nickjriley/"

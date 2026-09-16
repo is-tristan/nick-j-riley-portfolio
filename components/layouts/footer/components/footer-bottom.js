@@ -4,6 +4,9 @@
 import { useRef } from "react";
 import { motion, useInView } from "motion/react";
 
+// Utils
+import { fadeUpHidden, fadeUpVisible } from "@/utils/fade-up";
+
 // Styles
 import styles from "@/styles/components/layouts/footer/footer-bottom.module.scss";
 
@@ -23,16 +26,16 @@ export default function FooterBottom() {
             <div className={styles.footerWords}>
 
                 <motion.div
-                    initial={{ opacity: 0, y: 16 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
+                    initial={fadeUpHidden}
+                    animate={isInView ? fadeUpVisible : fadeUpHidden}
                     transition={{ duration: 0.5, delay: 0.25 }}
                     className={`${styles.footerWord} ${styles.footerWordOne}`}
                     dangerouslySetInnerHTML={{ __html: serve }}
                 />
 
                 <motion.div
-                    initial={{ opacity: 0, y: 16 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
+                    initial={fadeUpHidden}
+                    animate={isInView ? fadeUpVisible : fadeUpHidden}
                     transition={{ duration: 0.5, delay: 0.5 }}
                     className={`${styles.footerWord} ${styles.footerWordTwo}`}
                     dangerouslySetInnerHTML={{ __html: first }}

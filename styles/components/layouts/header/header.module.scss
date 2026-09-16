@@ -12,7 +12,7 @@
         align-items: center;
         padding-top: 1rem;
         padding-bottom: 0.5rem;
-        height: var(--mobileHeaderHeight);
+        height: var(--headerHeight);
         position: relative;
 
         @media (width >=1024px) {
@@ -28,7 +28,9 @@
     align-items: center;
     justify-content: center;
     height: 2.25rem;
-    position: relative;
+    position: absolute;
+    inset: 0;
+    margin: auto;
     color: var(--title);
     transition: var(--quickEase);
 

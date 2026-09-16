@@ -4,6 +4,9 @@
 import { useRef } from "react";
 import { motion, useInView } from "motion/react";
 
+// Utils
+import { fadeUpHidden, fadeUpVisible } from "@/utils/fade-up";
+
 // Components
 import Button from "../handlers/buttons";
 
@@ -58,8 +61,8 @@ export default function Heading({
             {title && (
 
                 <motion.div
-                    animate={hasAnimation ? (isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }) : { opacity: 1, y: 0 }}
-                    initial={hasAnimation ? { opacity: 0, y: 16 } : { opacity: 1, y: 0 }}
+                    animate={hasAnimation ? (isInView ? fadeUpVisible : fadeUpHidden) : fadeUpVisible}
+                    initial={hasAnimation ? fadeUpHidden : fadeUpVisible}
                     transition={hasAnimation ? { duration: 0.5, delay: 0.5 } : undefined}
                     className={`heading`}
                 >
@@ -90,8 +93,8 @@ export default function Heading({
             {(description || htmlDescription) && (
 
                 <motion.div
-                    animate={hasAnimation ? (isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }) : { opacity: 1, y: 0 }}
-                    initial={hasAnimation ? { opacity: 0, y: 16 } : { opacity: 1, y: 0 }}
+                    animate={hasAnimation ? (isInView ? fadeUpVisible : fadeUpHidden) : fadeUpVisible}
+                    initial={hasAnimation ? fadeUpHidden : fadeUpVisible}
                     transition={hasAnimation ? { duration: 0.5, delay: 0.66 } : undefined}
                     className={contentClass}
                 >
@@ -118,8 +121,8 @@ export default function Heading({
 
                 <motion.div
                     className="buttons"
-                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
-                    initial={{ opacity: 0, y: 16 }}
+                    animate={isInView ? fadeUpVisible : fadeUpHidden}
+                    initial={fadeUpHidden}
                     transition={{ duration: 0.5, delay: description || htmlDescription ? 0.5 : 0.25 }}
                 >
 

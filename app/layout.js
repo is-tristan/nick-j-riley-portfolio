@@ -25,24 +25,92 @@ const satoshi = localFont({
 // Styles
 import "@/styles/main.scss";
 
-// Metadata
-export const metadata = {
-  title: "Nick Riley | Drone Pilot & Aerial Cinematographer | South Africa",
-  description: "Nick Riley is a South African drone pilot with 6 years of film and advertising production experience for major brands. Available for freelance aerial cinematography through his affiliate production company.",
-};
+// Site
+import {
+  siteDescription,
+  siteKeywords,
+  siteName,
+  siteOgImage,
+  siteTitle,
+  siteUrl,
+} from "@/utils/site";
+import {
+  personJsonLd,
+  professionalServiceJsonLd,
+  websiteJsonLd,
+} from "@/utils/structured-data";
 
 // Components
 import Header from "@/components/layouts/header/header";
 import Footer from "@/components/layouts/footer/footer";
 import SmoothScroll from "@/components/handlers/smooth-scroll";
+import { JsonLd } from "@/components/seo/json-ld";
+
+// Metadata
+export const metadata = {
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: siteTitle,
+    template: `%s | ${siteName}`,
+  },
+  description: siteDescription,
+  keywords: siteKeywords,
+  authors: [{ name: siteName, url: siteUrl }],
+  creator: siteName,
+  publisher: siteName,
+  category: "Aerial cinematography",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_ZA",
+    url: siteUrl,
+    siteName: siteName,
+    title: siteTitle,
+    description: siteDescription,
+    images: [
+      {
+        url: siteOgImage,
+        alt: "Aerial cinematography reel featuring Nick Riley drone work",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteTitle,
+    description: siteDescription,
+    images: [siteOgImage],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+  other: {
+    "ai-content": "portfolio of Nick Riley, South African drone pilot and aerial cinematographer",
+  },
+};
 
 export default function RootLayout({ children }) {
 
   return (
 
-    <html lang="en" className={satoshi.variable} data-scroll-behavior="smooth">
+    <html lang="en-ZA" className={satoshi.variable} data-scroll-behavior="smooth">
 
       <body className={satoshi.className}>
+
+        <JsonLd data={personJsonLd} />
+
+        <JsonLd data={websiteJsonLd} />
+
+        <JsonLd data={professionalServiceJsonLd} />
 
         <div id="app" className="app">
 

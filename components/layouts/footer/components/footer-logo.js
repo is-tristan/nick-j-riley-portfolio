@@ -13,7 +13,7 @@ export default function FooterLogo() {
 
         <div className={`${styles.footerCol} ${styles.footerColLogo}`}>
 
-            <Link href="/" className={styles.footerLogo} aria-label="Home" dangerouslySetInnerHTML={{ __html: logo }} />
+            <Link href="/" className={styles.footerLogo} aria-label="Nick Riley — home" dangerouslySetInnerHTML={{ __html: logo }} />
 
         </div>
 

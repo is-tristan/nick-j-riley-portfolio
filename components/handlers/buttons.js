@@ -4,6 +4,9 @@
 import { useRef } from "react";
 import { motion, useInView } from "motion/react";
 
+// Utils
+import { fadeUpHidden, fadeUpVisible } from "@/utils/fade-up";
+
 // Next
 import Link from "next/link";
 
@@ -26,7 +29,7 @@ export default function Button({
 
     return (
 
-        <motion.div ref={ref} animate={hasAnimation ? (isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }) : { opacity: 1, y: 0 }} initial={hasAnimation ? { opacity: 0, y: 16 } : { opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: delay }}>
+        <motion.div ref={ref} animate={hasAnimation ? (isInView ? fadeUpVisible : fadeUpHidden) : fadeUpVisible} initial={hasAnimation ? fadeUpHidden : fadeUpVisible} transition={{ duration: 0.5, delay: delay }}>
 
             <Link href={href} target={target} className={`btn ${className}`} data-name={dataName}>
 
