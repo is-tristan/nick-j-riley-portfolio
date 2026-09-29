@@ -28,7 +28,7 @@ export default function ContactSection() {
 
         <section id="contact" className={`row borderBottom ${styles.contactSection}`} ref={ref}>
 
-            <div className={`container dualCols`}>
+            <div className={`container dualCols ${styles.contactContainer}`}>
 
                 <div className="contentCol borderRight borderLeft noPaddingBottomMobile">
 

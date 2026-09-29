@@ -1,3 +1,9 @@
+.contactContainer {
+    @media (width >=768px) {
+        gap: 0 !important;
+    }
+}
+
 .titleContainer {
     justify-content: center;
     align-items: center;
