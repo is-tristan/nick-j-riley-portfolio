@@ -124,13 +124,14 @@
     // Dual Columns
     &.dualCols {
         @media (width >=768px) {
-            flex-direction: row;
+            flex-flow: row nowrap;
             justify-content: space-between;
             align-items: stretch;
             gap: 3rem;
 
             >div {
-                flex-basis: calc(50% - 1.5rem);
+                flex: 0 0 50%;
+                width: 100%;
             }
         }
 
