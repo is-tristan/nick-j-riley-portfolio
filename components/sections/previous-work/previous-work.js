@@ -1,3 +1,8 @@
+/***
+ * TO DO:
+ * Add titles for each video.
+ */
+
 // Components
 import Eyebrow from "@/components/decoration/eyebrow";
 import Text from "@/components/content/text";

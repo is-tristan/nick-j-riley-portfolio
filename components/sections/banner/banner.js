@@ -9,6 +9,8 @@ export default function Banner({
     eyebrow = null,
     title = "<span class='fw300'>Aerial</span> <br> Cinematography",
     description = "<p>Cape Town · Film & Advertising Production · Available for Freelance Hire</p>",
+    video = "/videos/banner/banner-video.webm",
+    videoPoster = "/videos/banner/banner-video-poster.avif"
 }) {
 
     return (
@@ -42,14 +44,14 @@ export default function Banner({
                 <div className={styles.bannerVideoContainer}>
 
                     <video
-                        src="/videos/banner/xp-01-banner-video-02.webm"
+                        src={video}
                         autoPlay
                         muted
                         loop
                         playsInline
                         className={styles.bannerVideo}
                         preload="none"
-                        poster="/videos/banner/xp-01-banner-video-poster.webp"
+                        poster={videoPoster}
                         aria-label="Aerial cinematography showreel by Nick Riley"
                     />
 

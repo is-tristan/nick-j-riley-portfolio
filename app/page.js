@@ -1,3 +1,8 @@
+/***
+ * TO DO:
+ * Add showreel section below banner with titles and thumbnails.
+ */
+
 // Components
 import Banner from "@/components/sections/banner/banner"
 import LogoSection from "@/components/sections/logos/logo-section"
@@ -22,12 +27,12 @@ export default function Home() {
 
             <PreviousWork />
 
+            <TitlesSection />
+
             <LogoSection />
 
             <DronesSection />
-
-            <TitlesSection />
-
+            
             <ContactSection />
 
         </>

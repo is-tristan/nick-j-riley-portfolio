@@ -1,5 +1,10 @@
 "use client";
 
+/***
+ * TO DO:
+ * Fix middle line.
+ */
+
 // Imports
 import { useRef } from "react";
 import { useInView } from "motion/react";
